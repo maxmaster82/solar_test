@@ -28,6 +28,8 @@ class CommentController extends Controller
 		$comment->text = $request->text;
 		$comment->parent = $request->parent;
 		$comment->save();
+
+		return response()->json(['created' => true], 201);
     }
 
 	/**
